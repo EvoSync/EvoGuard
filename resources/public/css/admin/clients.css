@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+:root {
+    --font: 'Inter', sans-serif;
+    --second: 'Montserrat', sans-serif;
+    --background: #0d0e10;
+    --background-light: #FFF;
+    --default-color: #FFF;
+    --highlight-color: #00A3FF;
+    --card-background: #1B1F23;
+    --field-background-color: #181819;
+    --field-border-color: #1B1B29;
+}
+
+* {
+      margin: 0;
+      border: none;
+      padding: 0;
+      outline: none;
+      box-sizing: border-box;
+      font-family: var(--font);
+      text-decoration: none;
+}
+
+body {
+      color: var(--default-color);
+      background-color: var(--background);
+}
+
+#body div.app {
+      /* 
+            by default we set the visibility to hidden so we can allow
+            the api requests to be performed. once complete we flip it
+            round and set the spinner to hidden and the app to visible.
+      */
+      visibility: hidden;
+}
+
+#body #dashboard {
+      top: 50%;
+      left: 50%;
+      width: 50%;
+      height: 90%;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      margin-left: 40px;
+}
+
+#body #dashboard .title {
+      top: 30px;
+      left: 30px;
+      position: relative;
+      font-size: 1.5rem;
+      font-weight: 600;
+      font-style: normal;
+}
+
+#body #dashboard .quote {
+      top: 40px;
+      left: 30px;
+      color: var(--light-color);
+      position: relative;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 500;
+}
+
+#body #dashboard .createUser {
+      top: 120px;
+      width: 160px;
+      height: 30px;
+      margin-left: 75%;
+      position: relative;
+      font-family: var(--font);
+      font-weight: 400;
+      border-radius: 10px;
+      background-color: var(--highlight-color);
+}
+
+#body #dashboard #users {
+      top: 130px;
+      width: 85%;
+      opacity: 75%;
+      position: relative;
+      box-shadow: 0 2px 4px -1px rgb(7 14 35 / 8%), 0px 2px 8px -2px rgb(7 14 35 / 5%); 
+      font-family: arial, sans-serif;
+      margin-left: 70px;
+      border-radius: 10px;
+      border-collapse: collapse;
+      background-color: var(--card-background);
+}
+
+
+#body #dashboard #users td, th, thead, tbody {
+      text-align: left;
+      padding: 5px;
+}
+
+#body #dashboard #users #headers {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--highlight-color);   
+}
+
+/* styling for when the user is complete */
+#body #dashboard #users .user {
+      color: white;
+      cursor: pointer;
+}
+
+/* styling for when a username hovered over */
+#body #dashboard #users .user:hover {
+      color: var(--highlight-color);
+      text-decoration: underline;
+}
+
+
+#body #modal {
+      z-index: 1;
+      visibility: hidden;
+      top: 50%;
+      left: 50%;
+      width: 20%;
+      height: 50%;
+      border: 2px solid var(--field-background-color);
+      background-color: var(--card-background);
+      position: absolute;
+      border-radius: 10px;
+      transform: translate(-50%, -50%);
+}
+
+#body #modal .topbar {
+      width: 100%;
+      height: 15%;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      background: var(--background);
+}
+
+#body #modal .topbar .title {
+     font-family: "Inter";
+     padding: 20px;
+     font-style: normal;
+     font-weight: 400;
+     font-size: 24px;
+     line-height: 29px;
+}
+#body #modal a.label {
+     font-size: 18px;
+     font-weight: 500;
+     font-style: normal;
+}
+
+#body #modal form {
+      position: relative;
+      top: 20px;
+}
+
+#body #modal form label {
+      position: relative;
+      left: 25px;
+      font-size: 14px;
+      font-weight: 500;
+      font-style: normal;
+}
+
+input[type="text"], input[type="password"], #roles {
+      transform: scale(1.1);
+      border: 1px solid #262A30;
+      transition: border .3s ease !important;
+      color: var(--default-color);
+      width: 80%;
+      height: 100%;
+      margin: auto;
+      margin-bottom: 10px;
+      margin-top: 10px;
+      display: block;
+      padding: 10px;
+      border-radius: 0.5rem;
+      background-color: #262A30;
+}
+
+input[type="text"]:hover, input[type="password"]:hover {
+      border-color: var(--highlight-color) !important;
+}
+
+#body #modal .bottombar {
+      position: absolute;
+      bottom: 0px;
+      width: 100%;
+      height: 10%;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      background: var(--background);
+}
+
+.primary-btn {
+      position: absolute;
+      border-radius: 5px;
+      padding: 7px;
+      bottom: 10px;
+      right: 10px;
+      transition: all 0.25s;
+      font-weight: 500;
+}
+
+.primary-btn:hover {
+      opacity: 0.75;
+}
+
+.secondary-btn {
+      border: 1px solid #262A30;
+      font-weight: 500;
+      background-color: var(--card-background);
+      color: var(--light-color);
+      position: absolute;
+      border-radius: 5px;
+      padding: 7px;
+      bottom: 9px;
+      right: 90px;
+      transition: all 0.25s;
+}
+
+.secondary-btn:hover {
+      background: var(--background);
+}

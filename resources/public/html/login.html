@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <link rel="stylesheet" href="/resources/public/css/login.css">
+      <script src="/resources/public/javascript/mainframe.js"></script>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EvoGuard</title>
+</head>
+<body>
+    <section id="component">
+        <h1 class="header">EvoGuard</h1>
+        <p class="description">Login to your account below</p>
+        <form id="component-login" method="post">
+            <input required type="text" name="Username" class="text" placeholder="Username" autocomplete="off" value="[[$username]]">
+            <input required type="password" name="Password" class="text" placeholder="Password" autocomplete="off">
+            <input type="submit" class="submit grad-hov" value="Submit"> 
+            <p class="register">New here? <a onclick="redirect('register')" class="register_hyperlink">Create an account</a></p>
+        </form>
+      </section>
+      <div id="footer">
+        <p>©2023 <a href="https://evoguard.cc">EvoGuard Team</a> All rights reserved.</p>
+      </div>
+</body>
+</html>

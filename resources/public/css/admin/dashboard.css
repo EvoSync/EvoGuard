@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+:root {
+    --font: 'Inter', sans-serif;
+    --second: 'Montserrat', sans-serif;
+    --background: #0d0e10;
+    --background-light: #FFF;
+    --default-color: #FFF;
+    --highlight-color: #00A3FF;
+    --card-background: #1B1F23;
+}
+
+* {
+      margin: 0;
+      border: none;
+      padding: 0;
+      outline: none;
+      box-sizing: border-box;
+      font-family: var(--font);
+      text-decoration: none;
+}
+
+body {
+      color: var(--default-color);
+      background-color: var(--background);
+}
+
+#body div.app {
+      /* 
+            by default we set the visibility to hidden so we can allow
+            the api requests to be performed. once complete we flip it
+            round and set the spinner to hidden and the app to visible.
+      */
+      visibility: hidden;
+}
+
+#body #dashboard {
+      top: 50%;
+      left: 50%;
+      width: 50%;
+      height: 90%;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      margin-left: 40px;
+}
+
+#body #dashboard .title {
+      top: 30px;
+      left: 30px;
+      position: relative;
+      font-size: 1.5rem;
+      font-weight: 600;
+      font-style: normal;
+}
+
+#body #dashboard .quote {
+      top: 40px;
+      left: 30px;
+      color: var(--light-color);
+      position: relative;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 500;
+}
+
+#widgets {
+      top: 50px;
+      left: 10px;
+      position: relative;
+}
+
+#widgets #widget {
+      width: 200px;
+      margin: 15px;
+      height: 150px;
+      padding: 20px;
+      border-radius: 10px;
+      display: inline-block;
+      background-color: #1B1F23;
+      box-shadow: 0 2px 4px -1px rgb(7 14 35 / 8%), 0px 2px 8px -2px rgb(7 14 35 / 5%);
+}
+
+#widgets #widget h1.standard-title {
+      color: var(--highlight-color);
+      font-size: 40px;
+      font-weight: 500;
+      font-style: normal;
+}
+
+#widgets #widget h1.standard-header {
+      color: var(--default-color);
+      font-size: 23px;
+      font-weight: 300;
+      font-style: normal;
+}
+
+#widgets #graph {
+      width: 435px;
+      margin: 15px;
+      height: 280px;
+      border-radius: 10px;
+      vertical-align: top;
+      display: inline-block;
+      background-color: #1B1F23;
+      box-shadow: 0 2px 4px -1px rgb(7 14 35 / 8%), 0px 2px 8px -2px rgb(7 14 35 / 5%);
+}
+
+#widgets #graph h1.title {
+      left: 0;
+      color: var(--default-color);
+      position: relative;
+      font-size: 19px;
+      text-align: center;
+      margin-top: -10px;
+      font-weight: 500;
+      font-family: var(--second);
+}
+
+#widgets #graph .barchart {
+      width: 100%;
+      max-width: 735px;
+      padding-top: 40px;
+      padding-left: 15px;
+}
+
+#widgets #graph .piechart {
+      max-width: 360px;
+      max-height: 360px;
+      padding-left: 60px;
+      padding-top: 40px;
+}

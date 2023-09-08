@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <script src="/resources/public/javascript/mainframe.js"></script>
+      <script src="/resources/public/javascript/api/dashboard.js"></script>
+      <link rel="stylesheet" href="/resources/public/css/register.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>EvoGuard</title>
+</head>
+<body>
+    <section id="component">
+        <h1 class="header">EvoGuard</h1>
+        <p class="description">Create an account below</p>
+        <form id="component-register" method="post">
+            <input required type="email" name="Email" class="text" placeholder="Email" autocomplete="off">
+            <input required type="text" name="Username" class="text" placeholder="Username" autocomplete="off">
+            <input required type="password" name="Password" class="text" placeholder="Password" autocomplete="off">
+            <input type="submit" class="submit grad-hov" value="Register"> 
+            <p class="register">Already have an account? <a onclick="redirect('/login')" class="register_hyperlink">Login</a></p>
+        </form>
+      </section>
+      <div id="footer">
+        <p>©2023 <a href="https://evoguard.cc">EvoGuard Team</a> All rights reserved.</p>
+      </div>
+</body>
+</html>

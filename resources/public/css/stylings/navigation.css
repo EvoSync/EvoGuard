@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+:root {
+      --font: 'Inter', sans-serif;
+      --background: #0d0e10;
+      --light-color: #777F89;
+      --default-color: #FFF;
+      --highlight-color: #00A3FF;
+      --card-background: #1B1F23;
+  }
+  
+* {
+      margin: 0;
+      border: none;
+      padding: 0;
+      outline: none;
+      box-sizing: border-box;
+      font-family: var(--font);
+      text-decoration: none;
+}
+
+#body {
+      color: var(--default-color);
+      background-color: var(--background);
+}
+
+#body #sidebar {
+      top: 0px;
+      left: 0;
+      width: 90px;
+      bottom: 0;
+      height: 100%;
+      overflow: hidden;
+      position: fixed;
+      transition: width 0.2s linear;
+}
+
+#body #sidebar hr.right {
+      width: 1px;
+      right: 0px;
+      height: 100%;
+      position: absolute;
+      background-color: var(--highlight-color);
+}
+
+#body #sidebar hr.divider {
+      width: 60px;
+      height: 1px;
+      margin: 15px;
+      transition: width 0.2s linear;
+      background-color: var(--highlight-color);
+}
+
+#body #sidebar #sidebar-navbar {
+      background-color: transparent;
+}
+
+#body #sidebar #sidebar-navbar a {
+      color: var(--light-color);
+      width: 230px;
+      display: table;
+      position: relative;
+      font-size: 15px;
+      font-style: normal;
+      margin-left: 10px;
+      font-weight: 500;
+      padding-top: 5px;
+      border-radius: 10px;
+      padding-bottom: 10px;
+}
+
+#body #sidebar #sidebar-navbar .sidebar-item {
+      top: 12px;
+      position: relative;
+      margin-left: 10px;
+}
+
+#body #sidebar #sidebar-navbar .fas {
+      top: 14px;
+      width: 70px;
+      height: 40px;
+      position: relative;
+      font-size: 18px;
+      text-align: center;
+}
+
+#body #sidebar #sidebar-navbar a.is-active {
+      color: var(--highlight-color);
+}
+
+#body #sidebar #sidebar-navbar a:hover {
+      color: var(--highlight-color);
+      cursor: pointer;
+      transition: 0.2s ease-in-out;
+}
+
+#body #sidebar #sidebar-navbar a.logout {
+      bottom: 10px;
+      position: absolute;
+}
+
+@media screen and (min-width: 768px) {
+      #body #sidebar:hover {
+            width: 232px;
+            transition: all 0.5s ease; 
+      }
+
+      #body #sidebar:hover hr.divider {
+            width: 85%;
+      }
+}
+
+#body #dashboard {
+      top: 50%;
+      left: 50%;
+      width: 50%;
+      height: 90%;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      margin-left: 40px;
+}
+
+#body #dashboard .title {
+      top: 30px;
+      left: 30px;
+      position: relative;
+      font-size: 1.5rem;
+      font-weight: 600;
+      font-style: normal;
+}
+
+#body #dashboard .quote {
+      top: 40px;
+      left: 30px;
+      color: var(--light-color);
+      position: relative;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 500;
+}

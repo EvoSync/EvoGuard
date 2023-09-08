@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <link rel="stylesheet" href="/resources/public/css/admin/dashboard.css">
+      <link rel="stylesheet" href="/resources/public/css/stylings/navigation.css">
+      <link type="text/css" rel="stylesheet" href="/resources/public/css/stylings/animations.css">
+
+      <script src="/resources/public/javascript/mainframe.js"></script>
+      <script src="/resources/public/javascript/api/signout.js"></script>
+      <script src="/resources/public/javascript/api/dashboard.js"></script>
+      <script defer src="/resources/public/javascript/greetings.js"></script>
+      <script defer src="/resources/public/javascript/admin/dashboard.js"></script>
+
+      <script src="https://kit.fontawesome.com/96159f4e6d.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+      <title>Dashboard | EvoGuard</title>
+</head>
+<body id="body">
+      <div id="spinner">
+            <div class="preloader"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+            <p class="spinner-quote"> Hold tight while we setup your personal dashboard...</p>
+      </div>
+
+      <div class="app" id="app">
+            <nav id="sidebar">
+                  <hr class="right">
+                  <ul id="sidebar-navbar">
+                        <li><a onclick="redirectFromTokenOnwards('/dashboard/')" class="item is-active"><i class="fas fa-solid fa-table-columns"></i><span class="sidebar-item">Dashboard</span></a></li>
+                        <hr class="divider"> 
+                        <li><a onclick="redirectFromTokenOnwards('/dashboard/clients')" class="item"><i class="fas fa-solid fa-users"></i><span class="sidebar-item">Clients</span></a></li>
+                        <li><a onclick="redirectFromTokenOnwards('/dashboard/products')" class="item"><i class="fas fa-solid fa-box-open"></i><span class="sidebar-item">Products</span></a></li>
+                        <li><a onclick="redirectFromTokenOnwards('/dashboard/apps')" class="item"><i class="fas fa-solid fa-folder"></i><span class="sidebar-item">Apps</span></a></li>
+                        <hr class="divider" class="item"> 
+                        <li><a onclick="redirectFromTokenOnwards('/dashboard/administration')" class="item"><i class="fas fa-solid fa-screwdriver-wrench"></i><span class="sidebar-item">Administration</span></a></li>
+                        <li><a onclick="redirectFromTokenOnwards('/dashboard/integrations')" class="item"><i class="fas fa-brands fa-redhat"></i><span class="sidebar-item">Integrations</span></a></li>
+                        <li><a onclick="redirectFromTokenOnwards('/dashboard/messages')" class="item"><i class="fas fa-solid fa-bell"></i><span class="sidebar-item">Notifications</span></a></li>
+                        <li><a onclick="redirectFromTokenOnwards('/dashboard/settings')" class="item"><i class="fas fa-solid fa-gear"></i><span class="sidebar-item">Settings</span></a></li>
+                        <li><a onclick="signout()" class="item logout"><i class="fas fa-solid fa-person-walking-arrow-right"></i> <span class="sidebar-item">Logout</span></a></li>
+                  </ul>
+            </nav>
+      
+            <div id="dashboard">
+                  <p class="title"><p class="title"><span id="timeSpecifier"></span><span id="Username"></span></p></p>
+                  <p class="quote">Down below is a summary of what is peeping on your dashboard!</p>
+                  <div id="widgets">
+                        <div id="widget">
+                              <h1 class="standard-title"><span id="TotalMembers">Null</span></h1>
+                              <h1 class="standard-header">Members in total</h1>
+                        </div>
+      
+                        <div id="widget">
+                              <h1 class="standard-title"><span id="TotalActivatedLicenses">Null</span></h1>
+                              <h1 class="standard-header">Activated Licenses</h1>
+                        </div>
+      
+                        <div id="widget">
+                              <h1 class="standard-title"><span id="TotalPurchasesToday">Null</span></h1>
+                              <h1 class="standard-header">Purchases today</h1>
+                        </div>
+      
+                        <div id="widget">
+                              <h1 class="standard-title"><span id="NumberApplications">Null</span></h1>
+                              <h1 class="standard-header">Applications in total</h1>
+                        </div>
+
+                        <div id="graph">
+                              <h1 class="title">Sales this week</h1>
+                              <canvas id="WeeklySales" class="barchart"></canvas>
+                        </div>
+
+                        <div id="graph" style="height: 370px;">
+                              <h1 class="title">Applications</h1>
+                              <canvas id="ApplicationSlices" class="piechart"></canvas>
+                        </div>
+                  </div>
+            </div>
+      </div>
+</body>
+</html>

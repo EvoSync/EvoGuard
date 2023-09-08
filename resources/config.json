@@ -1,0 +1,18 @@
+{
+      "database": {
+            "address": "resources/db.sql",
+            "schema" : "resources/schema"
+      },
+
+      "website": {
+            "address": "0.0.0.0",
+            "port":    30120,
+            "cert":    "resources/server.cert",
+            "key":     "resources/server.key",
+            "jwt":     "abc123abc",
+            "assets":  {
+                  "directory": ".",
+                  "serveUnder": "/resources/public/"
+            }
+      }
+}

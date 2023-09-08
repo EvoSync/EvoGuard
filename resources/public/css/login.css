@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+:root {
+      --font-color: #FFF;
+      --header-font: 'Inter', sans-serif;
+      --secondary-font: 'Montserrat', sans-serif;
+      --background-color: #0d0e10;
+      --field-border-color: #1B1B29;
+      --field-background-color: #181819;
+      --field-hover-border-color: #00A3FF;
+}
+
+body {
+      background-color: var(--background-color);
+}
+
+#component {
+      top: 50%;
+      left: 50%;
+      color: white;
+      width: 30%;
+      height: 40%;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+}
+
+/* header is what is positioned just above the input boxes */
+#component h1.header {
+      font-size: 30px;
+      text-align: center;
+      font-family: var(--header-font);
+}
+
+/* description sits underneath the header */
+#component p.description {
+      font-size: 15px;
+      text-align: center;
+      margin-top: -22px;
+      font-weight: 200;
+      font-family: var(--secondary-font);
+}
+
+#component p.register {
+        font-size: 13px;
+        text-align: center;
+        font-weight: 200;
+        font-family: var(--secondary-font);
+}
+
+#component a.register_hyperlink {
+        color: #00A3FF;
+        cursor: pointer;
+}
+
+#component a.register_hyperlink:hover {
+        text-decoration: underline;
+}
+
+#component-login input.submit {
+      color: var(--font-color);
+      font-size: 14px;
+      width: 284px;
+      height: 45.0667px;
+      margin: auto;
+      border: 2px solid var(--field-border-color);
+      display: block;
+      margin-top: 20px;
+      font-family: var(--header-font);
+      border-radius: 8px;
+      transition: transform .2s, background-color 1s;
+      background: linear-gradient(90deg, #3f51b5, transparent) #2196f3;
+}
+
+#component-login input.submit:hover {
+      cursor: pointer;
+      transform: scale(1.05);
+      background-color: #00F260;
+      color: #fff;
+      border: 2px solid var(--field-hover-border-color);
+}
+
+#component-login input.text {
+      color: var(--font-color);
+      width: 260px;
+      height: 18px;
+      margin: auto;
+      margin-top: 20px;
+      border: 2px solid var(--field-border-color);
+      display: block;
+      padding: 12px 10px;
+      transition: transform .2s;
+      font-family: var(--header-font);
+      border-radius: 8px;
+      background-color: var(--field-background-color);
+}
+
+#component-login input.text:hover {
+      text-decoration: none;
+      transform: scale(1.05);
+      border: 2px solid var(--field-hover-border-color);
+}
+
+#component-login input.text:focus {
+      outline: var(--field-hover-border-color);
+}
+
+
+/* footer exists at the bottom of said page */
+#footer {
+    font-size: 14px;
+    width: 100%;
+    color: var(--font-color);
+    bottom: 0;
+    position: fixed;
+    text-align: center;
+    font-family: var(--header-font);
+}
+
+#footer a {
+      color: #00A3FF;
+}
+
+#footer a:hover {
+      cursor:pointer;
+}

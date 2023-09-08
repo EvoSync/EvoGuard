@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <link rel="stylesheet" href="/resources/public/css/admin/clients.css">
+      <link rel="stylesheet" href="/resources/public/css/stylings/navigation.css">
+      <link type="text/css" rel="stylesheet" href="/resources/public/css/stylings/animations.css">
+
+      <script src="/resources/public/javascript/mainframe.js"></script>
+      <script src="/resources/public/javascript/api/cookie.js"></script>
+      <script src="/resources/public/javascript/api/clients.js"></script>
+      <script src="/resources/public/javascript/api/signout.js"></script>
+      <script defer src="/resources/public/javascript/greetings.js"></script>
+      <script defer src="/resources/public/javascript/admin/clients.js"></script>
+      <script defer src="/resources/public/javascript/admin/hide.js"></script>
+
+      <script src="https://kit.fontawesome.com/96159f4e6d.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+      <title>Clients | EvoGuard</title>
+</head>
+<body id="body">
+      <div id="spinner">
+            <div class="preloader"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+            <p class="spinner-quote"> Hold tight while we setup your personal dashboard...</p>
+      </div>
+      <div class="app" id="app">
+            <nav id="sidebar">
+                  <hr class="right">
+                  <ul id="sidebar-navbar">
+                        <li><a onclick="redirectFromTokenOnwards('/dashboard/')" class="item"><i class="fas fa-solid fa-table-columns"></i><span class="sidebar-item">Dashboard</span></a></li>
+                        <hr class="divider"> 
+                        <li><a onclick="redirectFromTokenOnwards('/dashboard/clients')" class="item is-active"><i class="fas fa-solid fa-users"></i><span class="sidebar-item">Clients</span></a></li>
+                        <li><a onclick="redirectFromTokenOnwards('/dashboard/products')" class="item"><i class="fas fa-solid fa-box-open"></i><span class="sidebar-item">Products</span></a></li>
+                        <li><a onclick="redirectFromTokenOnwards('/dashboard/apps')" class="item"><i class="fas fa-solid fa-folder"></i><span class="sidebar-item">Apps</span></a></li>
+                        <hr class="divider" class="item"> 
+                        <li><a onclick="redirectFromTokenOnwards('/dashboard/administration')" class="item"><i class="fas fa-solid fa-screwdriver-wrench"></i><span class="sidebar-item">Administration</span></a></li>
+                        <li><a onclick="redirectFromTokenOnwards('/dashboard/integrations')" class="item"><i class="fas fa-brands fa-redhat"></i><span class="sidebar-item">Integrations</span></a></li>
+                        <li><a onclick="redirectFromTokenOnwards('/dashboard/messages')" class="item"><i class="fas fa-solid fa-bell"></i><span class="sidebar-item">Notifications</span></a></li>
+                        <li><a onclick="redirectFromTokenOnwards('/dashboard/settings')" class="item"><i class="fas fa-solid fa-gear"></i><span class="sidebar-item">Settings</span></a></li>
+                        <li><a onclick="signout()" class="item logout"><i class="fas fa-solid fa-person-walking-arrow-right"></i> <span class="sidebar-item">Logout</span></a></li>
+                  </ul>
+            </nav>
+             <div id="dashboard">
+                  <p class="title"><span id="timeSpecifier"></span><span id="Username"></span></p></p>
+                  <p class="quote">Down below you are able to moderate and manage your clients</p>
+                  <button class="createUser" onclick="fireUserMenu()">Add a new user</button>
+                  <table id="users">
+                        <thead id="headers">
+                              <tr>
+                                <th>Username</th>
+                                <th>Email</th>
+                                <th>Permission</th>
+                              </tr>
+                        </thead>
+                        <tbody id="component-users"></tbody>
+                  </table>
+             </div>
+             <div id="modal" class="animate" visibility="hidden">
+                  <div class="topbar">
+                        <p class="title"> Add a user </p>
+                  </div>
+                  <div class="bottombar"></div>
+                  <form>
+                        <label>Enter user details</label><br>
+                        <input type="text" id="username" name="Username" autocomplete="off" placeholder="Username" required><br>
+                        <input type="text" id="email" name="Email" autocomplete="off" placeholder="Email" required><br>
+                        <input type="password" id="password" name="Password" autocomplete="off" placeholder="Password" required><br>
+                        <select name="roles" id="roles">
+                        <option value="admin">Admin</option>
+                        <option value="default">Default User</option>
+                        </select>
+                  </form>
+                  <button type="reset" class="secondary-btn" onclick="hideModal()">Close</button>
+                  <button type="submit" class="primary-btn" onclick="createUser()">Add user</button>
+             </div>
+      </div>
+</body>
+</html>
