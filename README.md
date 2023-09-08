@@ -1,5 +1,5 @@
 # EvoGuard: 
-he Ultimate Licensing System Manager
+The Ultimate Licensing System Manager
 
 **EvoGuard** is a powerful licensing system manager that empowers you to take control of your digital assets through a user-friendly WEB3 dashboard. It's packed with features designed to simplify licensing and enhance security, including FamilyTREE for parent-child recognition, secure token redirects, a custom HyperText Writer, a beginner-friendly Database adapter, and an extensive API for seamless integration. Plus, you can interact with the API through JavaScript to display critical values on your web pages.
 
