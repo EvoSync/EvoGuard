@@ -38,6 +38,7 @@ Setting up EvoGuard is very easy and requires just a few steps:
 
 These simple setup steps ensure that EvoGuard is configured correctly for your environment and security requirements.
 
+*Below is the EvoGuard dashboard
 ![EvoGuard Dashboard](https://github.com/EvoSync/EvoGuard/assets/99523265/e61d0832-2d36-43a9-9f19-714319643d9e)
 
 ## Contributing
