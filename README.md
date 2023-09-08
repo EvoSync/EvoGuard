@@ -1,5 +1,4 @@
-# EvoGuard: 
-The Ultimate Licensing System Manager
+# EvoGuard: The Ultimate Licensing System Manager
 
 **EvoGuard** is your comprehensive solution for managing licensing and fortifying the security of your digital assets. 
 With an intuitive WEB3 dashboard, EvoGuard puts you in control, offering a rich set of features to streamline licensing processes and enhance your security posture.
