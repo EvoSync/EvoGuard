@@ -3,7 +3,6 @@
 **EvoGuard** is your comprehensive solution for managing licensing and fortifying the security of your digital assets. 
 With an intuitive WEB3 dashboard, EvoGuard puts you in control, offering a rich set of features to streamline licensing processes and enhance your security posture.
 
-*Below is the EvoGuard dashboard*
 ![EvoGuard Dashboard](https://github.com/EvoSync/EvoGuard/assets/99523265/e61d0832-2d36-43a9-9f19-714319643d9e)
 
 ## Features
