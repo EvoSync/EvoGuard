@@ -25,7 +25,7 @@ We welcome contributions from the community!.
 
 ## License
 
-EvoGuard is released under the [MIT License].
+EvoGuard is released under the [MIT License](./LICENSE)
 
 ## Contact
 
